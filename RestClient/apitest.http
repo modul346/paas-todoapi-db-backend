@@ -1,0 +1,45 @@
+# Als erstes definieren wir die host-adresse
+@hosturl = https://fenggen.azurewebsites.net
+
+# Dies ist ein GET Request, der alle ToDos holt
+GET {{hosturl}}/api/todos
+
+###
+
+# Nur ein ToDo holen mit korrekter Id
+GET {{hosturl}}/api/todos/d5bc739e-9929-40ee-9153-4fd5a31d8a0c
+
+###
+
+# Nur ein ToDo holen mit nicht vorhandenen Id
+GET {{hosturl}}/api/todos/0cf2768d-5800-4f54-ad29-2e289b6cf53e
+
+###
+
+# Ein neues ToDo erstellen
+POST {{hosturl}}/api/todos
+content-type: application/json
+
+{
+    "taskDescription": "Ein neues ToDo"
+}
+
+###
+
+# Ein ToDo updaten
+Put {{hosturl}}/api/todos/d5bc739e-9929-40ee-9153-4fd5a31d8a0c
+content-type: application/json
+
+{
+    "isCompleted": true,
+    "taskDescription": "Neuer Text für das ToDo"
+}
+
+###
+
+# Ein ToDo löschen
+Delete {{hosturl}}/api/todos/dfbdc739-b6d1-4f24-a65f-75c48571352c
+
+###
+
+# Rufe die Webseite https://localhost:5001/swagger/index.html im Browser auf

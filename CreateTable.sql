@@ -1,6 +1,5 @@
-USE [ToDoDb]
-GO
-    /****** Object:  Table [dbo].[ToDos]    Script Date: 11.11.2022 09:46:37 ******/
+/****** Erstellt die Tabelle [dbo].[ToDos] ******/
+/****** Copy Paste in Query Editor in Azure und dort ausführen ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
